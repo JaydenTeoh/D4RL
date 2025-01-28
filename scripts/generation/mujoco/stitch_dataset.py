@@ -6,7 +6,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('files', nargs='+', type=str, help="List of input HDF5 files to stitch")
     parser.add_argument('--output_file', type=str, default='output.hdf5', help="Name of the output HDF5 file")
-    parser.add_argument('--maxlen', type=int, default=3000000, help="Maximum length of combined dataset")
+    parser.add_argument('--maxlen', type=int, default=4000000, help="Maximum length of combined dataset")
     args = parser.parse_args()
 
     outf = h5py.File("./datasets/" + args.output_file, 'w')
